@@ -1,8 +1,12 @@
 {% extends "pages/page.html" %}
 
-{% load mezzanine_tags %}
+{% load i18n mezzanine_tags pages_tags staticfiles %}
 
-{% block main %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static "mezzanine_folder_page/css/mezzanine_folder_page.css" %}">
+{% endblock %}
+
+{% block title %}
     <div class="jumbotron">
         <h1>{% editable page.folderpage.title %}{{ page.folderpage.title }}{% endeditable %}</h1>
         {% if page.folderpage.intro %}
@@ -12,16 +16,21 @@
             {% endeditable %}
         </p>
         {% endif %}
-        <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
+        {% if page.folderpage.intro_button_label %}
+        <p><a class="btn {{ page.folderpage.intro_button_classes }}" href="{{ page.folderpage.intro_button_href|default:"#" }}" role="button">
+            {{ page.folderpage.intro_button_label }}</a></p>
+        {% endif %}
     </div>
+{% endblock %}
 
-    {% editable page.folderpage.content %}
-        {{ page.folderpage.content|richtext_filters|safe }}
+{% block main %}
+    {% editable page.folderpage.content_info %}
+        {{ page.folderpage.content_info|richtext_filters|safe }}
     {% endeditable %}
 
     {% if page.folderpage.listing_children %}
         {% page_menu page %}
-        <div class="text-center">
+        <div class="text-center folder-page-children">
             {% for page in page_branch %}
                 <div class="thumbnail">
                     <div class="caption">
