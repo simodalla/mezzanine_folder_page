@@ -16,7 +16,7 @@ install_requires = [
 from mezzanine_folder_page import __version__ as version
 
 setup(
-    name='mezzanine-page-folder',
+    name='mezzanine-folder-page',
     version=version,
     author='Simone Dalla',
     author_email='simodalla@gmail.com',
