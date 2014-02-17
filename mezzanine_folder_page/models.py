@@ -21,7 +21,7 @@ class FolderPage(Page):
     intro_button_href = models.CharField(
         _('Href (Intro Button)'), blank=True, max_length=500)
 
-    search_fields = ('intro', 'content',)
+    search_fields = ('intro', 'content_info',)
 
     class Meta:
         verbose_name = _('Folder page')
