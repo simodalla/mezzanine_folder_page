@@ -27,13 +27,12 @@ class FolderModelTest(TestCase):
                                            content=FOLDER_CONTENT,
                                            listing_children=True,
                                            intro_button_label='Go To',
-                                           intro_button_class='',
-                                           intro_button_href='')
+                                           intro_button_href='#')
         self.assertEqual(folder.title, FOLDER_NAME)
         self.assertEqual(folder.intro, FOLDER_INTRO)
         self.assertEqual(folder.content, FOLDER_CONTENT)
         self.assertTrue(folder.listing_children, True)
         self.assertTrue(folder.intro_button_label, 'Go To')
-        self.assertTrue(folder.intro_button_class, 'btn-primary btn-lg')
+        self.assertTrue(folder.intro_button_classes, 'btn-primary btn-lg')
         self.assertTrue(folder.intro_button_href, '#')
 
