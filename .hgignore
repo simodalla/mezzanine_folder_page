@@ -1,0 +1,14 @@
+syntax: glob
+*.pyc
+*.pyo
+*.db
+.DS_Store
+.coverage
+.idea
+build
+dist
+*.egg-info
+*.egg
+
+syntax: regexp
+^static/

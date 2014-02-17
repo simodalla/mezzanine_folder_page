@@ -1,0 +1,14 @@
+*.pyc
+*.pyo
+*.db
+*.csv
+.DS_Store
+.coverage
+.idea
+build
+dist
+*.egg
+*.egg-info
+*.egg-info/
+docs/build/
+
