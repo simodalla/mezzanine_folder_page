@@ -12,7 +12,7 @@ from .models import FolderPage
 
 class FolderPageAdmin(PageAdmin):
     fieldsets = (deepcopy(PageAdmin.fieldsets) +
-                 ((_('Jumbotron Data'),
+                 ((_('Header Data (Jumbotron)'),
                    {'fields': (
                        'intro', 'content_info', 'listing_children',
                        'intro_button_label', 'intro_button_classes',

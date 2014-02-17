@@ -16,7 +16,7 @@ class FolderPage(Page):
     intro_button_label = models.CharField(
         _('Label (Intro Button)'), max_length=40, blank=True)
     intro_button_classes = models.CharField(
-        _('Classes (Intro Button)'), max_length=250, blank=True,
+        _('CSS Classes (Intro Button)'), max_length=250, blank=True,
         default='btn-primary btn-lg')
     intro_button_href = models.CharField(
         _('Href (Intro Button)'), blank=True, max_length=500)
