@@ -3,8 +3,7 @@ from __future__ import unicode_literals
 import os
 from setuptools import setup, find_packages
 
-README = open(os.path.join(
-    os.path.dirname(__file__), 'README.rst')).read()
+readme = open('README.rst').read()
 
 # allow setup.py to be run from any path
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
@@ -21,7 +20,7 @@ setup(
     author='Simone Dalla',
     author_email='simodalla@gmail.com',
     description='A Mezzanine module for add new content type named FolderPage.',
-    long_description=README,
+    long_description=readme,
     license='BSD License',
     url='https://github.com/simodalla/mezzanine_page_folder/',
     include_package_data=True,
